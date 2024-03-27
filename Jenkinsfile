@@ -18,25 +18,8 @@ git bisect bad 198644632661c67b6c32f59e9047c11a70685e15'''
     }
 
     stage('run2') {
-      parallel {
-        stage('run2') {
-          steps {
-            sh 'git bisect bad 8bad1c6db9cf6930abd8e52ff5dfdd046194ae9b'
-          }
-        }
-
-        stage('run3') {
-          steps {
-            sh 'git bisect bad 26438de182f7a00147b5e53e9408a3c3745ca509'
-          }
-        }
-
-        stage('run4') {
-          steps {
-            sh 'git bisect bad 34d31973a0cc1f3d77cd5038fc9c01eeba7ec183'
-          }
-        }
-
+      steps {
+        sh 'git bisect bad 8bad1c6db9cf6930abd8e52ff5dfdd046194ae9b'
       }
     }
 
