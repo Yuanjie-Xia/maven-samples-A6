@@ -9,7 +9,7 @@ pipeline {
 
     stage('run') {
       steps {
-        sh '''/opt/homebrew/bin/mvn clean test'''
+        sh '/opt/homebrew/bin/mvn clean test'
       }
     }
 
